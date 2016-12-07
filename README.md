@@ -1,55 +1,36 @@
-## Website Performance Optimization portfolio project
+# Website Performance Optimization portfolio project #
 
-Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
+1. In this project two websites are to be optimized for the page speed and the number of frames per second.
+2. The first website is a portfolio site where the page speed is to be optimized.
+3. The second website is a pizza shop website where the number of frames per second must be approximately equal to 60fps.
 
-To get started, check out the repository and inspect the code.
+## Instructions to open the websites ##
 
-### Getting started
+1. Extract the zip file.
+2. open the index.html file in the folder after extraction to view the portfolio website.
+3. Now go to views folder and open pizza.html file to view the pizza shop website.
+4. Paste the URL "https://manojmaddy123.github.io/gooDone/" in "https://developers.google.com/speed/pagespeed/insights/" to check the pagespeed score for mobile and desktop.
 
-####Part 1: Optimize PageSpeed Insights score for index.html
+## Editing index.html to render the speed of the protfolio site ##
 
-Some useful tips to help you get started:
+1. The code in the file styles.css is minified by css minifier app and is inlined in the html file.
+2. The font family is removed from the inline css code and its corresponding css font link is removed.
+3. The analytics.js file is removed from the link and its corresponding functions are removed as it has no effect on building the site.
+4. All the images links in the content div are downloaded and are placed in the images folder and the links are mentioned.
+5. Since the image files are too large to load, they are compressed and added to the images folder.
+6. https://manojmaddy123.github.io/gooDone/
+7. The above website is hosted in the github and is tested in the pagespeed insights website for a mobile and desktop score of 94 and 96 respectively.
 
-1. Check out the repository
-1. To inspect the site on your phone, you can run a local server
+## Editing the main.js file for the pizza shop website for running in 60fps ##
 
-  ```bash
-  $> cd /path/to/your-project-folder
-  $> python -m SimpleHTTPServer 8080
-  ```
+1. The main.js had a function called randomPizzaContainer that was called multiple times which was responsible for forced synchronous layout.
+2. The function was corrected by calling it once and iterating it through a for loop.
+3. The images are now compressed and the links are correspondingly given.
+4. Now going to tools and rendering by selecting the paint flash and FPS meter, the site is now scrolled up and down to get an 60fps approximately.
 
-1. Open a browser and visit localhost:8080
-1. Download and install [ngrok](https://ngrok.com/) to the top-level of your project directory to make your local server accessible remotely.
+## Screenshots Folder added in the Zip file ##
+1. The screenshots for the pagespeed score for mobile and desktop versions are added to the folder named screenshots.
 
-  ``` bash
-  $> cd /path/to/your-project-folder
-  $> ./ngrok http 8080
-  ```
 
-1. Copy the public URL ngrok gives you and try running it through PageSpeed Insights! Optional: [More on integrating ngrok, Grunt and PageSpeed.](http://www.jamescryer.com/2014/06/12/grunt-pagespeed-and-ngrok-locally-testing/)
 
-Profile, optimize, measure... and then lather, rinse, and repeat. Good luck!
 
-####Part 2: Optimize Frames per Second in pizza.html
-
-To optimize views/pizza.html, you will need to modify views/js/main.js until your frames per second rate is 60 fps or higher. You will find instructive comments in main.js. 
-
-You might find the FPS Counter/HUD Display useful in Chrome developer tools described here: [Chrome Dev Tools tips-and-tricks](https://developer.chrome.com/devtools/docs/tips-and-tricks).
-
-### Optimization Tips and Tricks
-* [Optimizing Performance](https://developers.google.com/web/fundamentals/performance/ "web performance")
-* [Analyzing the Critical Rendering Path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/analyzing-crp.html "analyzing crp")
-* [Optimizing the Critical Rendering Path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/optimizing-critical-rendering-path.html "optimize the crp!")
-* [Avoiding Rendering Blocking CSS](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-blocking-css.html "render blocking css")
-* [Optimizing JavaScript](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/adding-interactivity-with-javascript.html "javascript")
-* [Measuring with Navigation Timing](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/measure-crp.html "nav timing api"). We didn't cover the Navigation Timing API in the first two lessons but it's an incredibly useful tool for automated page profiling. I highly recommend reading.
-* <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/eliminate-downloads.html">The fewer the downloads, the better</a>
-* <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer.html">Reduce the size of text</a>
-* <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/image-optimization.html">Optimize images</a>
-* <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching.html">HTTP caching</a>
-
-### Customization with Bootstrap
-The portfolio was built on Twitter's <a href="http://getbootstrap.com/">Bootstrap</a> framework. All custom styles are in `dist/css/portfolio.css` in the portfolio repo.
-
-* <a href="http://getbootstrap.com/css/">Bootstrap's CSS Classes</a>
-* <a href="http://getbootstrap.com/components/">Bootstrap's Components</a>
