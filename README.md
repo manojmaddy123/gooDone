@@ -26,7 +26,7 @@
 1. The main.js had a function called randomPizzaContainer that was called multiple times which was responsible for forced synchronous layout.
 2. The function was corrected by calling it once and iterating it through a for loop.
 3. The images are now compressed and the links are correspondingly given.
-4. Now going to tools and rendering by selecting the paint flash and FPS meter, the site is now scrolled up and down to get an 60fps approximately.
+4. Now going to tools and rendering by selecting the paint flash and FPS meter, the site is now scrolled up and down to get an 59.8fps to 60fps.
 
 ## Screenshots Folder added in the Zip file ##
 1. The screenshots for the pagespeed score for mobile and desktop versions are added to the folder named screenshots.
